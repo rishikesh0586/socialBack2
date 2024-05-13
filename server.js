@@ -31,20 +31,20 @@ io.on('connection', socket => {
 //#endregion
 const BASE = process.env.BASE_URL;
 //#region // !Routes
-app.get('${BASE}/', (req, res) => {
+app.get('/', (req, res) => {
   res.send('Hello, world!');
 });
-app.get('${BASE}/api', (req, res) => {
+app.get('/api', (req, res) => {
   res.send('your api is working');
 });
 
-app.use(`${BASE}/api`, require('./routes/authRouter'));
-app.use(`${BASE}/api`, require('./routes/userRouter'));
-app.use(`${BASE}/api`, require('./routes/postRouter'));
-app.use(`${BASE}/api`, require('./routes/commentRouter'));
-app.use(`${BASE}/api`, require('./routes/adminRouter'));
-app.use(`${BASE}/api`, require('./routes/notifyRouter'));
-app.use(`${BASE}/api`, require('./routes/messageRouter'));
+app.use(`/api`, require('./routes/authRouter'));
+app.use(`/api`, require('./routes/userRouter'));
+app.use(`/api`, require('./routes/postRouter'));
+app.use(`/api`, require('./routes/commentRouter'));
+app.use(`/api`, require('./routes/adminRouter'));
+app.use(`/api`, require('./routes/notifyRouter'));
+app.use(`/api`, require('./routes/messageRouter'));
 //#endregion
 
 
